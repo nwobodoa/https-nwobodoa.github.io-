@@ -11,18 +11,7 @@ users = [
         "email": "william.macdonald@example.com",
         "joined": "07/18/07"
     },
-    {
-        "name": "\u0631\u0627\u062f\u06cc\u0646 \u067e\u0627\u0631\u0633\u0627",
-        "image": "https://randomuser.me/api/portraits/thumb/men/66.jpg",
-        "email": "rdyn.prs@example.com",
-        "joined": "10/22/02"
-    },
-    {
-        "name": "\u0633\u0627\u0631\u0627 \u0642\u0627\u0633\u0645\u06cc",
-        "image": "https://randomuser.me/api/portraits/thumb/women/85.jpg",
-        "email": "sr.qsmy@example.com",
-        "joined": "01/15/17"
-    },
+
     {
         "name": "Arttu Kotila",
         "image": "https://randomuser.me/api/portraits/thumb/men/97.jpg",
@@ -251,12 +240,7 @@ users = [
         "email": "miro.wainio@example.com",
         "joined": "07/14/15"
     },
-    {
-        "name": "\u0622\u0648\u0627 \u0646\u0643\u0648 \u0646\u0638\u0631",
-        "image": "https://randomuser.me/api/portraits/thumb/women/63.jpg",
-        "email": "aw.nkwnzr@example.com",
-        "joined": "02/04/13"
-    },
+
     {
         "name": "Laly Faure",
         "image": "https://randomuser.me/api/portraits/thumb/women/52.jpg",
@@ -365,12 +349,7 @@ users = [
         "email": "esperanza.gallegos@example.com",
         "joined": "08/16/13"
     },
-    {
-        "name": "\u0637\u0627\u0647\u0627 \u06cc\u0627\u0633\u0645\u06cc",
-        "image": "https://randomuser.me/api/portraits/thumb/men/16.jpg",
-        "email": "th.ysmy@example.com",
-        "joined": "09/23/11"
-    },
+
     {
         "name": "Marcel Strohmeier",
         "image": "https://randomuser.me/api/portraits/thumb/men/95.jpg",
@@ -382,12 +361,6 @@ users = [
         "image": "https://randomuser.me/api/portraits/thumb/men/41.jpg",
         "email": "gustavo.rodriguez@example.com",
         "joined": "11/18/15"
-    },
-    {
-        "name": "\u062d\u0633\u06cc\u0646 \u06a9\u0627\u0645\u0631\u0648\u0627",
-        "image": "https://randomuser.me/api/portraits/thumb/men/69.jpg",
-        "email": "hsyn.khmrw@example.com",
-        "joined": "11/07/09"
     },
     {
         "name": "Trigost Bezsmertniy",
@@ -580,12 +553,6 @@ users = [
         "image": "https://randomuser.me/api/portraits/thumb/men/14.jpg",
         "email": "liam.li@example.com",
         "joined": "02/06/05"
-    },
-    {
-        "name": "\u0639\u0628\u0627\u0633 \u062c\u0639\u0641\u0631\u06cc",
-        "image": "https://randomuser.me/api/portraits/thumb/men/23.jpg",
-        "email": "aabs.jaafry@example.com",
-        "joined": "05/15/02"
     },
     {
         "name": "Topias Wiita",
