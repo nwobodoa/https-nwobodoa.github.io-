@@ -1,23 +1,27 @@
 
-
-window.onload = function () {
     const ulElement = document.getElementsByClassName("contact-list")[0];
     const spanTotal = document.getElementById("total-users");
+    spanTotal.innerHTML = `${users.length}`;
     const paginationElement = document.getElementsByClassName("pagination");
     const contactsPerPage = 10;
     let currentPage = 1;
     const totalPages = Math.ceil(users.length / contactsPerPage);
     let currentActiveTab = null
 
-    let usersChunked = []
-
-    for (let i = 0; i < users.length; i += 10) {
-        usersChunked.push(users.slice(i,i + contactsPerPage))
-    }
-
+    const usersChunked = groupUsersByPage()
     const paginationLinks = createPaginationLinks()
 
+    displayContacts(usersChunked[0])
+    currentActiveTab = paginationLinks[0].firstChild
+    currentActiveTab.classList.add('active')
 
+    function groupUsersByPage() {
+        const chunks = []
+        for (let i = 0; i < users.length; i += 10) {
+            chunks.push(users.slice(i, i + contactsPerPage))
+        }
+        return chunks
+    }
 
     function displayContacts(usersOnPage) {
         ulElement.innerHTML = "";
@@ -36,38 +40,43 @@ window.onload = function () {
         }
     }
 
+
     function createPaginationLinks() {
-        return Array.from(Array(totalPages).keys()).map(i => {
+        const listItems = []
+        for (let page = 0; page < totalPages ; page++) {
             const link = document.createElement("a")
             link.href = "#";
-            link.innerText = `${i+ 1}`;
-            link.id = `${i+1}`
+            link.innerText = `${page + 1}`;
             const listItem = document.createElement("li");
             listItem.appendChild(link)
-            return listItem
-        })
+            listItems.push(listItem)
+        }
+        return listItems
     }
 
-    // li -> a
-    // li.firstchild.addev
-    function addPagination() {
-        paginationElement.innerHtml = " ";
-        paginationLinks.forEach((link,index) => {
-        link.firstChild.addEventListener("click", e => {
-                if(currentActiveTab) {
+    function addClickListenersToPaginationLinks() {
+        for (let idx = 0; idx < paginationLinks.length; idx ++) {
+            const anchorLink = paginationLinks[idx].firstChild
+            anchorLink.addEventListener("click", e => {
+                if (currentActiveTab) {
                     currentActiveTab.classList.toggle("active")
                 }
                 currentActiveTab = e.target
                 currentActiveTab.classList.toggle("active")
-                currentPage = index;
-                displayContacts(usersChunked[index]);
+                currentPage = idx;
+                displayContacts(usersChunked[idx]);
             });
-        })
+
+        }
+    }
+
+    function addPagination() {
+        paginationElement.innerHtml = " ";
+        addClickListenersToPaginationLinks()
         paginationElement[0].append(...paginationLinks)
     }
-    spanTotal.innerHTML = `${users.length}`;
+
     addPagination();
-}
 
 
 
